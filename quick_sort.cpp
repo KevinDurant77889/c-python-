@@ -25,9 +25,9 @@ int partition(int *arr, int front, int end){
 }
 void quick_sort(int *arr, int front, int end){
     if (front < end) {
-        int pivot = Partition(arr, front, end);
-        QuickSort(arr, front, pivot - 1);
-        QuickSort(arr, pivot + 1, end);
+        int pivot = partition(arr, front, end);
+        quick_sort(arr, front, pivot - 1);
+        quick_sort(arr, pivot + 1, end);
     }
 }
 
